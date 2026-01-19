@@ -17,9 +17,9 @@ Axiom addresses this at the infrastructure level.
 
 ---
 
-## What the Axiom SDK Does
+## What the Axiom-Infra SDK Does
 
-The Axiom SDK runs locally and transforms raw context into a form that preserves
+The Axiom-Infra SDK runs locally and transforms raw context into a form that preserves
 reasoning value while removing identifying information.
 
 At a high level:
