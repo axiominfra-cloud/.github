@@ -1,4 +1,4 @@
-## Axiom-AI  
+## Axiom-Infra
 **Privacy-first AI infrastructure for sensitive data**
 
 Axiom builds edge-first AI infrastructure that enables modern language models to reason over private data **without exposing the data itself**.
