@@ -2,88 +2,79 @@
 
 **The semantic boundary for AI systems**
 
-
 ---
 
 ## Mission
 
-**Axiom SDK exists to make it possible for AI systems to reason over sensitive data
-without that data ever leaving its trusted boundary.**
+**Axiom-Core SDK makes it possible for AI systems to reason over sensitive data without that data ever leaving its trusted boundary.**
 
-As AI models grow more capable, the limiting factor is no longer intelligence —
-it is how context is handled.
-
-Axiom addresses this at the infrastructure level.
+As AI models grow more capable, the limiting factor is no longer intelligence — it’s how context is handled.  
+Axiom Infra solves this at the infrastructure layer.
 
 ---
 
-## What the Axiom-Infra SDK Does
+## The Pain We Solve
 
-The Axiom-Infra SDK runs locally and transforms raw context into a form that preserves
-reasoning value while removing identifying information.
+- **Cloud AI can’t access sensitive data** (compliance, residency, audit constraints)  
+- **Redaction breaks reasoning** (key context gets lost)  
+- **Encryption blocks utility** (models can’t reason on ciphertext)  
+- **Enterprises need proof** that sensitive data never left the boundary  
 
-At a high level:
+---
 
+## What Makes Axiom-Core SDK Unique
+
+Most privacy tools protect data but **break reasoning**.  
+Axiom-Core SDK preserves **meaning** while removing **identity**, and provides **verifiable evidence**.
+
+**Axiom-Core SDK combines:**
+- **Semantic abstraction** (structure preserved, identifiers removed)  
+- **Deterministic transformation** (auditable and repeatable)  
+- **Explicit boundary enforcement** (raw data never exits)  
+- **Attested execution (preview)** for verification workflows  
+
+---
+
+## Technical Impact
+
+Axiom-Core SDK enables **high‑fidelity reasoning** in regulated environments without exposing raw data.  
+It turns sensitive input into **safe, structured context** that can be sent to cloud models.
 ```
-Raw Local Data
-↓
-Semantic Abstraction (structure, not raw text)
-↓
-Identity Removal
-↓
-Boundary Enforcement
-↓
-Safe-to-Share Reasoning Context
+┌──────────────────────────────────────────────┐  
+│                Raw Local Data                │  
+└──────────────────────────────────────────────┘  
+                     │  
+                     ▼  
+┌──────────────────────────────────────────────┐  
+│             Semantic Abstraction             │  
+└──────────────────────────────────────────────┘  
+                     │  
+                     ▼  
+┌──────────────────────────────────────────────┐  
+│               Identity Removal               │  
+└──────────────────────────────────────────────┘  
+                     │  
+                     ▼  
+┌──────────────────────────────────────────────┐  
+│             Boundary Enforcement             │  
+└──────────────────────────────────────────────┘  
+                     │  
+                     ▼  
+┌──────────────────────────────────────────────┐  
+│     Safe-to-Share Reasoning Context             
+└──────────────────────────────────────────────┘  
 ```
-
-Only the transformed context is intended to be shared downstream.
-
-
-<img width="1536" height="1024" alt="axiom-core diagram" src="https://github.com/user-attachments/assets/e427ca1a-cf69-478a-a4ef-6ec6d6b3d603" />
-
 ---
 
-## Design Principles
+## Repositories
 
-- **Local-first** — Axiom runs where the data already lives  
-- **Boundary-driven** — Raw data must not cross trust boundaries  
-- **Semantic, not redaction-based** — Structure is preserved, identity is removed  
-- **Deterministic and inspectable** — Behavior should be understandable and auditable  
-- **Infrastructure, not application** — Axiom is a building block, not a product UI  
+- **`axiom-core`** — Axiom-Core SDK (local transformation + verification tools)  
+- **`axiom-core-docs`** — documentation & guides  
+- **`axiom-website`** — product site  
 
----
-
-## What Lives Here
-
-This organization hosts the **open-source Axiom SDK** and its supporting
-specifications.
-
-The SDK focuses on:
-- semantic abstraction
-- entity and role modeling
-- identity masking
-- explicit boundary enforcement
-
----
-
-## Scope
-
-Axiom is not:
-- an AI model
-- a hosted service
-- a prompt filter
-- a compliance product
-
-It is **infrastructure** for building trustworthy AI systems.
-
----
-
-## Status
-
-The Axiom SDK is under active development.
-Interfaces may evolve as the design is refined.
+Docs: https://axiominfra.github.io/axiom-core-docs
 
 ---
 
 > **Intelligence without boundaries is not trustworthy.**  
-> *Axiom defines the boundary.*
+> *Axiom Infra defines the boundary.*
