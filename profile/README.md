@@ -84,6 +84,8 @@ Axiom-Core runs locally and transforms sensitive input into a safe, structured r
 
 Documentation: https://axiominfra.github.io/axiom-core-docs
 
+Quick Demos: https://github.com/AxiomInfra/axiom-core-examples
+
 ---
 
 > **Intelligence without boundaries is not trustworthy.**  
